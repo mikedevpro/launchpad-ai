@@ -5,12 +5,13 @@ import { navLinks } from "../data/content";
 const navButtons = [
   {
     label: "Watch demo",
-    className: "rounded-full border border-white/15 text-white transition hover:bg-white/5",
+    className:
+      "rounded-full border border-white/15 text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
   },
   {
     label: "Start free",
     className:
-      "rounded-full border border-cyan-400/40 bg-cyan-400/10 text-cyan-200 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400/20",
+      "rounded-full border border-cyan-400/40 bg-cyan-400/10 text-cyan-200 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
   },
 ];
 
@@ -41,7 +42,12 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           {navButtons.map((button) => (
-            <button key={button.label} className={`px-4 py-2 text-sm font-medium ${button.className}`}>
+            <button
+              key={button.label}
+              type="button"
+              aria-label={button.label}
+              className={`px-4 py-2 text-sm font-medium ${button.className}`}
+            >
               {button.label}
             </button>
           ))}
@@ -91,6 +97,8 @@ export default function Navbar() {
               {navButtons.map((button) => (
                 <button
                   key={button.label}
+                  type="button"
+                  aria-label={button.label}
                   className={`px-4 py-3 text-sm font-medium text-white transition ${button.className}`}
                 >
                   {button.label}

@@ -115,16 +115,20 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <motion.button
+                type="button"
+                aria-label="Try LaunchPad AI"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-full bg-cyan-400 px-6 py-3 font-medium text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:opacity-90"
+                className="rounded-full bg-cyan-400 px-6 py-3 font-medium text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-800/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 Try LaunchPad AI
               </motion.button>
               <motion.button
+                type="button"
+                aria-label="Watch demo"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-full border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
+                className="rounded-full border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 Watch demo
               </motion.button>

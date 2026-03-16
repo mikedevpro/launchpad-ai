@@ -26,7 +26,9 @@ export default function CTASection() {
             {cta.buttons.map((label, index) => (
               <button
                 key={label}
-                className={`rounded-full px-6 py-3 font-medium transition ${
+                type="button"
+                aria-label={label}
+                className={`rounded-full px-6 py-3 font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
                   index === 0
                     ? "bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 hover:-translate-y-0.5 hover:opacity-90"
                     : "border border-white/15 hover:bg-white/5"

@@ -13,7 +13,7 @@ const getCardClass = (featured) =>
   }`;
 
 const getButtonClass = (featured) =>
-  `mt-8 rounded-full px-5 py-3 font-medium transition ${
+  `mt-8 rounded-full px-5 py-3 font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
     featured
       ? "bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 hover:opacity-90"
       : "border border-white/15 text-white hover:bg-white/5"
@@ -47,7 +47,9 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button className={getButtonClass(plan.featured)}>{plan.cta}</button>
+            <button type="button" aria-label={plan.cta} className={getButtonClass(plan.featured)}>
+              {plan.cta}
+            </button>
           </article>
         ))}
       </div>
