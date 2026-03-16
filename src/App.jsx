@@ -1,6 +1,5 @@
-import LandingPage from './pages/LandingPage'
-import './styles/globals.css'
+import LandingPage from "./pages/LandingPage";
 
 export default function App() {
-  return <LandingPage />
+  return <LandingPage />;
 }

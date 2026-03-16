@@ -1,26 +1,31 @@
-const questions = [
-  {
-    q: 'Can I reuse these sections?',
-    a: 'Yes, import and reorder any component from the new page layout.'
-  },
-  {
-    q: 'Where do I edit text?',
-    a: 'Start in src/data/content.js for central copy and labels.'
-  }
-]
+import { faqs } from "../data/content";
+
+function FAQItem({ question, answer }) {
+  return (
+    <article className="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition duration-300 hover:border-cyan-400/25 hover:bg-white/[0.07]">
+      <h3 className="text-lg font-medium text-white">{question}</h3>
+      <p className="mt-3 leading-7 text-white/65">{answer}</p>
+    </article>
+  );
+}
 
 export default function FAQ() {
   return (
-    <section className="rounded-xl border bg-white p-6">
-      <h2 className="text-2xl font-bold">FAQ</h2>
-      <div className="mt-4 grid gap-4">
-        {questions.map(({ q, a }) => (
-          <details key={q} className="rounded border p-3">
-            <summary className="cursor-pointer font-medium">{q}</summary>
-            <p className="mt-2 text-sm text-slate-600">{a}</p>
-          </details>
+    <section id="faq" className="mx-auto max-w-4xl px-6 py-20">
+      <div className="text-center">
+        <div className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-200/80">
+          FAQ
+        </div>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          A few quick answers.
+        </h2>
+      </div>
+
+      <div className="mt-10 space-y-4">
+        {faqs.map((faq) => (
+          <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
         ))}
       </div>
     </section>
-  )
+  );
 }
