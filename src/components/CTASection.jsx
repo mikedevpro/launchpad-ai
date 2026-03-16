@@ -23,20 +23,20 @@ export default function CTASection() {
             {cta.text}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            {cta.buttons.map((label, index) => (
-              <button
-                key={label}
-                type="button"
-                aria-label={label}
-                className={`rounded-full px-6 py-3 font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
-                  index === 0
-                    ? "bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 hover:-translate-y-0.5 hover:opacity-90"
-                    : "border border-white/15 hover:bg-white/5"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+            <button
+              type="button"
+              aria-label="Start free today"
+              className="rounded-full bg-cyan-400 px-6 py-3 font-medium text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
+              Start free today
+            </button>
+            <button
+              type="button"
+              aria-label="Book a demo"
+              className="rounded-full border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
+              Book a demo
+            </button>
           </div>
         </div>
       </div>

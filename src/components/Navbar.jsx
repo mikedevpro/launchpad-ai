@@ -2,19 +2,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "../data/content";
 
-const navButtons = [
-  {
-    label: "Watch demo",
-    className:
-      "rounded-full border border-white/15 text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
-  },
-  {
-    label: "Start free",
-    className:
-      "rounded-full border border-cyan-400/40 bg-cyan-400/10 text-cyan-200 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
-  },
-];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +20,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-white/65 transition hover:text-white"
+              className="text-sm text-white/65 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               {link.label}
             </a>
@@ -41,16 +28,20 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          {navButtons.map((button) => (
-            <button
-              key={button.label}
-              type="button"
-              aria-label={button.label}
-              className={`px-4 py-2 text-sm font-medium ${button.className}`}
-            >
-              {button.label}
-            </button>
-          ))}
+          <button
+            type="button"
+            aria-label="Watch demo"
+            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          >
+            Watch demo
+          </button>
+          <button
+            type="button"
+            aria-label="Start free"
+            className="rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          >
+            Start free
+          </button>
         </div>
 
         <button
@@ -58,7 +49,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 md:hidden"
         >
           <span className="space-y-1.5">
             <span
@@ -87,23 +78,27 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white/75 transition hover:bg-white/10 hover:text-white"
+                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-white/75 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
             <div className="mt-4 flex flex-col gap-3">
-              {navButtons.map((button) => (
-                <button
-                  key={button.label}
-                  type="button"
-                  aria-label={button.label}
-                  className={`px-4 py-3 text-sm font-medium text-white transition ${button.className}`}
-                >
-                  {button.label}
-                </button>
-              ))}
+              <button
+                type="button"
+                aria-label="Watch demo"
+                className="rounded-full border border-white/15 px-4 py-3 text-sm font-medium text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
+                Watch demo
+              </button>
+              <button
+                type="button"
+                aria-label="Start free"
+                className="rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
+                Start free
+              </button>
             </div>
           </motion.div>
         )}

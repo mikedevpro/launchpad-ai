@@ -1,20 +1,7 @@
 const footerLinks = {
-  sections: [
-    {
-      title: "Product",
-      items: ["Features", "Pricing", "FAQ"],
-    },
-    {
-      title: "Company",
-      items: ["About", "Contact", "Privacy"],
-    },
-  ],
+  product: ["Features", "Pricing", "FAQ"],
+  company: ["About", "Contact", "Privacy"],
 };
-
-const footerCopy =
-  "A modern SaaS landing page concept focused on clarity, responsiveness, and polished UI.";
-
-const legalText = "© 2026 LaunchPad AI. Crafted as a front-end portfolio project.";
 
 export default function Footer() {
   return (
@@ -28,30 +15,43 @@ export default function Footer() {
             <span className="text-xl font-semibold tracking-tight">LaunchPad AI</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-7 text-white/55">
-            {footerCopy}
+            A modern SaaS landing page concept focused on clarity, responsiveness, and polished UI.
           </p>
         </div>
 
-        {footerLinks.sections.map((section) => (
-          <div key={section.title}>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-              {section.title}
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm text-white/55">
-              {section.items.map((item) => (
-                <li key={item}>
-                  <a href="#" className="transition hover:text-white">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+            Product
+          </h3>
+          <ul className="mt-4 space-y-3 text-sm text-white/55">
+            {footerLinks.product.map((item) => (
+              <li key={item}>
+                <a href="#" className="transition hover:text-white">
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+            Company
+          </h3>
+          <ul className="mt-4 space-y-3 text-sm text-white/55">
+            {footerLinks.company.map((item) => (
+              <li key={item}>
+                <a href="#" className="transition hover:text-white">
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="border-t border-white/10 px-6 py-5 text-center text-sm text-white/40">
-        {legalText}
+        © 2026 LaunchPad AI. Crafted as a front-end portfolio project.
       </div>
     </footer>
   );

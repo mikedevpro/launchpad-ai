@@ -6,21 +6,6 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
-const heroOrbs = [
-  {
-    className:
-      "absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl",
-    animate: { opacity: [0.4, 0.6, 0.4], scale: [1, 1.08, 1] },
-    transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-  },
-  {
-    className:
-      "absolute right-0 top-24 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl",
-    animate: { opacity: [0.2, 0.35, 0.2], y: [0, 10, 0] },
-    transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-  },
-];
-
 function HeroCard() {
   return (
     <motion.div
@@ -77,14 +62,16 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
-        {heroOrbs.map((orb) => (
-          <motion.div
-            key={orb.className}
-            animate={orb.animate}
-            transition={orb.transition}
-            className={orb.className}
-          />
-        ))}
+        <motion.div
+          animate={{ opacity: [0.4, 0.6, 0.4], scale: [1, 1.08, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl"
+        />
+        <motion.div
+          animate={{ opacity: [0.2, 0.35, 0.2], y: [0, 10, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute right-0 top-24 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl"
+        />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -119,7 +106,7 @@ export default function Hero() {
                 aria-label="Try LaunchPad AI"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-full bg-cyan-400 px-6 py-3 font-medium text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-800/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                className="rounded-full bg-cyan-400 px-6 py-3 font-medium text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 Try LaunchPad AI
               </motion.button>
