@@ -11,13 +11,16 @@ https://launchpad-ai-theta.vercel.app
 ## 📸 Screenshots
 
 ### Hero Section
-(Insert screenshot here)
+<img width="1272" height="630" alt="Screenshot 2026-03-17 at 10 44 15 AM" src="https://github.com/user-attachments/assets/7139689f-5628-4b7e-a5fa-bb05f76ec64b" />
+
 
 ### Features Section
-(Insert screenshot here)
+<img width="1272" height="630" alt="Screenshot 2026-03-17 at 10 44 30 AM" src="https://github.com/user-attachments/assets/02bdd81f-f91d-4c80-89bf-262c93edc415" />
+
 
 ### Pricing Section
-(Insert screenshot here)
+<img width="1272" height="630" alt="Screenshot 2026-03-17 at 10 44 44 AM" src="https://github.com/user-attachments/assets/73b5ceb8-3b62-4a4e-ab9d-558fc8606ba4" />
+
 
 ### Mobile Navigation
 (Insert screenshot here)
