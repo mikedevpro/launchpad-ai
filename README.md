@@ -6,8 +6,6 @@ This project showcases a realistic SaaS marketing page architecture with reusabl
 
 ## 🌐 Live Demo
 
-(Add your deployed link here once deployed)
-
 https://launchpad-ai-theta.vercel.app
 
 ## 📸 Screenshots
