@@ -23,7 +23,8 @@ https://launchpad-ai-theta.vercel.app
 
 
 ### Mobile Navigation
-(Insert screenshot here)
+<img width="552" height="630" alt="Screenshot 2026-03-17 at 10 54 54 AM" src="https://github.com/user-attachments/assets/26b89eef-73ac-4aa7-9e7d-9fc9e7d0ecaf" />
+
 
 ## ✨ Features
 
